@@ -37,18 +37,22 @@
 
 * Using LazyPredict library we were able to get an overview of how all the algorithms perform with the given dataset. The following is the outcome:
 <img src='images/plot_a.png' width='35%' height='35%'>
-* 
+
+* Therefore, after the above results the DecisionTree and RandomForest algorithms were further taken for hyper parameter tuning to evaluate their strenghts for model building.
+* DecisionTree was able to provide a score of 95%
+* RandomForest was able to provide a score of 98%.
 
 
 ## Conclusion:
 
-* Linear Regression was selected as the ultimate choice for model building. Linear Regression's score and cross validation on test data gave stronger results compared to the other algorithms tested.
+* Considering the possiblity of overfitting it was decided to select DecisionTree for model construction. 
 
 
 ## Model Deployment:
 
 * With the help of Pickle library the model was exported as an API.
-* Using Flask a server was created to onboard the API and serve an interactable webpage that lets users input the location, bedrooms and bathroom to get the price prediction:
-<img src='images/plot_g.png' width='45%' height='45%'>
+* Further, the project was bundled in a docker to enable portability.
+* Using Flask a server was created to onboard the API and Flassger was used to create a front-end deployment of the model.
+* Link to the front-end deployment: https://ml-fake-note-detection.herokuapp.com/apidocs/#/default/get_predict
 
-### The file with detailed step-by-step code is [here](/Price_Prediction_of_homes.ipynb).
+### The file with detailed step-by-step code is [here](/Deploy_Model.ipynb).
